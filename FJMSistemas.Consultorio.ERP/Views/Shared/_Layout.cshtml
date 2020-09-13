@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html class="no-js">
+@await Html.PartialAsync("PartialViews/_head")
+<body>
+    @await Html.PartialAsync("PartialViews/_navbar")
+    <div id="wrapper">
+        <aside id="sidebar" class="page-sidebar hidden-md hidden-sm hidden-xs">
+            <div class="sidebar-inner">
+                <div class="sidebar-scrollarea">
+                    @await Html.PartialAsync("PartialViews/_leftsidebar_profile_user")
+                    @await Html.PartialAsync("PartialViews/_leftsidebar_menu_principal")
+                    @await Html.PartialAsync("PartialViews/_leftsidebar_menu_extra")
+                </div>
+            </div>
+        </aside>
+        @await Html.PartialAsync("PartialViews/_rightsidebar")
+        @RenderBody()
+    </div>
+    @await Html.PartialAsync("PartialViews/_footer")
+    <div id="back-to-top">
+        <a href="#">Back to Top</a>
+    </div>
+    @await Html.PartialAsync("PartialViews/_scripts")
+</body>
+</html>
+
